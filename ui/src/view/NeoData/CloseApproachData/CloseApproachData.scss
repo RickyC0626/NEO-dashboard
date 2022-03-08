@@ -1,0 +1,28 @@
+@import '../../../../public/sass/main.scss';
+
+.CloseApproachData {
+  background-color: $color-primary-light;
+  font-size: $default-font-size;
+  height: 43vh;
+  margin: 1rem auto;
+
+  .content {
+    height: 34vh;
+  }
+
+  p {
+    display: inline;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-left: $padding-in-card;
+    }
+  }
+}
+
+.last {
+  margin-bottom: 3.5rem;
+}
