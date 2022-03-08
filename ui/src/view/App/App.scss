@@ -1,0 +1,55 @@
+@import '../../../public/sass/main.scss';
+
+.App {
+    padding: $gutter-vertical $gutter-horizontal;
+    text-align: center;
+    background-image: linear-gradient(to bottom, $color-primary, $color-primary-light);
+    color: white;
+    height: 100vh;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.header {
+    padding: 2rem 2rem;
+
+    &.content-section {
+        height: 12vh;
+        border: transparent;
+        background-color: transparent;
+        padding: 3rem;
+    }
+}
+
+.name {
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+.logo {
+    max-width: 8vw;
+
+    &.nasa {
+        margin: 0 auto;
+    }
+    
+    &.owl {
+        padding-top: 2rem;
+    }
+}
+
+div::-webkit-scrollbar {
+    width: 2px;
+}
+
+div::-webkit-scrollbar-track {
+    background: $color-primary-light;
+}
+
+div::-webkit-scrollbar-thumb {
+    background: $color-accent-blue-dark;
+}

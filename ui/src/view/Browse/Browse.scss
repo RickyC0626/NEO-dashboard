@@ -1,0 +1,10 @@
+@import '../../../public/sass/main.scss';
+
+.Browse {
+  overflow: auto;
+  margin-right: 2rem;
+
+  .content {
+    height: 70vh;
+  }
+}
