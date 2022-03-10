@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* By setting the root font size to a percentage (rather than a pixel value),
+the font size will be determined as a percentage of the font size given by the browser.
+This is best practice, so if users accessing the page have a specified font size setting,
+then the font will adjust according the to their specifications.
+This will be considered the root for the rem values.
+Otherwise, the root will stay as the pixel value you provide.
+The default browser font size is 16px, so 62.5% is 10px. */
+html {
+  font-size: 62.5%;
+}
+
+/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+body {
+  box-sizing: border-box;
+}
+
+.content-section-header {
+  font-size: 3.5rem;
+  font-weight: 200;
+  color: #ffffff;
+  padding-bottom: 1rem;
+}
+
+.section-header {
+  font-size: 2.5rem;
+  font-weight: 200;
+  text-align: left;
+  margin: 1rem;
+}
+
+.content-section {
+  max-height: 78vh;
+  padding: 1rem 2rem;
+  background-image: linear-gradient(to bottom, #000338, #0E1A52);
+  border: 0.1rem solid #494b6f;
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+}
+.content-section .content {
+  overflow: auto;
+}
+
+a {
+  color: #ffffff;
+}
+
+a:hover {
+  color: #7e7e80;
+}
+
+.row {
+  max-width: 200rem;
+  margin: 0 auto;
+  /* This selects everything except for the last child. */
+  /* This will select all elements where the class attributes begin with "col-". 
+        *= indicates includes
+        $= indicates ends with */
+  /* The calc function allows for operations with mixed units.
+        If using a variable within calc, the variable must be wrapped in hash followed my curly brackets. */
+}
+.row:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.row [class*=col-] {
+  float: left;
+}
+.row [class*=col-]:not(:last-child) {
+  margin-right: 2rem;
+}
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 2rem) / 4);
+}
+.row .col-2-of-4 {
+  width: calc(
+      100% - 2 * ((100% - 3 * 2rem) / 4) - 2 * 2rem
+    );
+}
+
+.col-1-of-2.left {
+  text-align: left;
+  padding-top: 1rem;
+}
+.col-1-of-2.right {
+  text-align: right;
+  width: calc(100% - 1rem);
+  border-bottom: 0.1rem solid #494b6f;
+  padding-bottom: 1rem;
+}
+
+@media only screen and (min-width: 0px) {
+  .col-1-of-2.left {
+    margin-bottom: 0rem;
+  }
+  .col-1-of-2.right {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 1885px) {
+  .col-1-of-2.left {
+    margin-bottom: -2rem;
+  }
+  .col-1-of-2.left a {
+    position: relative;
+  }
+  .col-1-of-2.right {
+    text-align: right;
+  }
+}
+.col-1-of-3 {
+  width: calc((100% - 2 * 1rem) / 3);
+}
+
+.col-2-of-3 {
+  width: calc(100% - ((100% - 2 * 1rem) / 3) - 2 * 1rem);
+}
+
+/*# sourceMappingURL=main.css.map */
