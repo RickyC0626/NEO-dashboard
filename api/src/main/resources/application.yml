@@ -1,0 +1,6 @@
+.env:
+  directory: /
+  filename: .env
+
+neo:
+  NASA_API_KEY: ${env.NASA_API_KEY:DEMO_KEY}
