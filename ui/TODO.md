@@ -2,13 +2,13 @@
 
 ## Simplistic UI Rewrite
 
-Can probably remove Sass preprocessor and go for pure CSS. This will keep development simpler and allow viewing CSS changes quickly on page refresh instead of waiting for compilation. Should take note on the color scheme to reuse as variables.
-
-Not sure if Redux is needed for state management as there are not many complex UI changes, can get away with React state hooks.
+Can keep Sass and Redux but add tests for components using Storybook. Consider looking into island architecture.
 
 ## Responsive Layouts
 
 Page layout doesn't look great on screens smaller than a desktop monitor. Should probably work on this first to test different designs with mock content.
+
+UI loaders for components while waiting for data to be fetched and loaded.
 
 ## Better Pagination UX
 
