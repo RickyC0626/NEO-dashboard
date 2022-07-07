@@ -6,7 +6,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false --passWithNoTests",
+    "test:dev": "react-scripts test",
     "eject": "react-scripts eject",
     "pre-commit": "lint-staged",
     "compile:sass": "sass public/sass:public/css -w"
