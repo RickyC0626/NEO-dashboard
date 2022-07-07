@@ -8,6 +8,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "pre-commit": "lint-staged",
     "compile:sass": "sass public/sass:public/css -w"
   },
   "dependencies": {
@@ -26,7 +27,14 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
     "sass": "^1.49.9"
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier --write --ignore-unknown"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"

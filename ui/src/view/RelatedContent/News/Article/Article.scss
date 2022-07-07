@@ -9,7 +9,7 @@
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
-    
+
     &:hover {
       color: $color-accent-blue;
     }
@@ -27,12 +27,12 @@
   .title {
     font-size: $default-font-size;
     font-weight: 600;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     text-align: left;
   }
-  
+
   p {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     text-align: left;
   }
 }

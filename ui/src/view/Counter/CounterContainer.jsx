@@ -5,33 +5,29 @@ import { increment, decrement } from "../../state";
 import Counter from "./Counter";
 
 // Smart Container
-class CounterContainer extends Component
-{
-    render()
-    {
-        return (
-            <Counter
-                counter={this.props.counter}
-                onIncrement={this.props.onIncrement}
-                onDecrement={this.props.onDecrement}
-            />
-        );
-    }
+class CounterContainer extends Component {
+  render() {
+    return (
+      <Counter
+        counter={this.props.counter}
+        onIncrement={this.props.onIncrement}
+        onDecrement={this.props.onDecrement}
+      />
+    );
+  }
 }
 
 // Map state to props;
-function mapState(state)
-{
-    return { counter: state.counter };
+function mapState(state) {
+  return { counter: state.counter };
 }
 
 // Map dispatch to props
-function mapDispatch(dispatch)
-{
-    return {
-        onIncrement: (amount) => dispatch(increment(amount)),
-        onDecrement: (amount) => dispatch(decrement(amount))
-    };
+function mapDispatch(dispatch) {
+  return {
+    onIncrement: (amount) => dispatch(increment(amount)),
+    onDecrement: (amount) => dispatch(decrement(amount)),
+  };
 }
 
 // Export our store-connected component

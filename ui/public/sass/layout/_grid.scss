@@ -37,7 +37,7 @@
     text-align: left;
     padding-top: $padding-in-card;
   }
-  
+
   &.right {
     text-align: right;
     width: calc((100% - #{$padding-in-card}));
@@ -55,7 +55,7 @@
     &.left {
       margin-bottom: 0rem;
     }
-  
+
     &.right {
       text-align: left;
     }
@@ -66,12 +66,12 @@
   .col-1-of-2 {
     &.left {
       margin-bottom: -2rem;
-      
+
       a {
         position: relative;
       }
     }
-  
+
     &.right {
       text-align: right;
     }
@@ -83,5 +83,7 @@
 }
 
 .col-2-of-3 {
-  width: calc(100% - ((100% - 2 * #{$padding-in-card}) / 3) - 2 * #{$padding-in-card});
+  width: calc(
+    100% - ((100% - 2 * #{$padding-in-card}) / 3) - 2 * #{$padding-in-card}
+  );
 }

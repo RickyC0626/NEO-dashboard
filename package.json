@@ -1,0 +1,23 @@
+{
+  "name": "neo-dashboard",
+  "version": "0.1.0",
+  "description": "A SpaceX-themed dashboard for displaying near-Earth objects",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "install-deps": "yarn && cd ui && yarn",
+    "test": "cd ui && yarn test",
+    "pre-commit": "cd ui && yarn pre-commit"
+  },
+  "repository": "git@github.com:RickyC0626/NEO-dashboard.git",
+  "author": "Ricky Chon <rickychon99@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^8.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn pre-commit"
+    }
+  }
+}

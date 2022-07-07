@@ -1,6 +1,7 @@
 # Efficient Code Organization in React-Redux
 
 ## Directory Hierarchy for File Management
+
 ```
 node_modules/
 src/
@@ -28,7 +29,9 @@ package.json
 ## Naming Convention for Files, Component Names, Functions and Variables
 
 ### Components
+
 **Component Class Names**
+
 ```js
 // PascalCase
 CreateUser.js => <CreateUser />
@@ -36,6 +39,7 @@ FoodMenu.js => <FoodMenu />
 ```
 
 **Component Class Functions and Variables**
+
 ```js
 // camelCase
 function renderUsersList() { return; }
@@ -44,28 +48,41 @@ let selectedCategories = [];
 ```
 
 ### Functions and Variables
+
 **Functions that Render JSX**
+
 ```js
 // snake_case
-errors_for(field)
+errors_for(field);
 {
-    return <span className="errors"></span>
+  return <span className="errors"></span>;
 }
 
-users_list_table()
+users_list_table();
 {
-    return <div><table><tr><th>/*... */</th></tr></table></div>
+  return (
+    <div>
+      <table>
+        <tr>
+          <th>/*... */</th>
+        </tr>
+      </table>
+    </div>
+  );
 }
 ```
 
 **Variable Names with Two Words**
+
 ```js
 // snake_case
 let user_id = "";
 ```
 
 ### Redux
+
 **Redux Action Names**
+
 ```js
 // snake_case
 user_get.js (Single user)
@@ -75,6 +92,7 @@ food_delete.js
 ```
 
 **Redux Reducers**
+
 ```js
 // dash-case
 users-get.js
@@ -82,9 +100,11 @@ food-delete.js
 ```
 
 ## Componentization
+
 Break down into as many reusable components as possible
 
 Lower level HTML DOM elements:
+
 - Buttons
 - Buttons, Badges, Icons
 - Form Inputs, Labels
@@ -96,27 +116,28 @@ Lower level HTML DOM elements:
 - Other components
 
 ## Order of Component Methods
+
 ```js
-class Users extends Component
-{
-    constructor() {}
-    componentWillMount() {}
-    componentDidMount() {}
-    componentWillReceiveProps() {}
-    componentDidUpdate() {}
-    /* ... */
-    restOfTheFunctions() {}
-    functions_that_render_jsx() {}
-    /* ... */
-    render() {}
+class Users extends Component {
+  constructor() {}
+  componentWillMount() {}
+  componentDidMount() {}
+  componentWillReceiveProps() {}
+  componentDidUpdate() {}
+  /* ... */
+  restOfTheFunctions() {}
+  functions_that_render_jsx() {}
+  /* ... */
+  render() {}
 }
 
 function mapState() {}
 function mapDispatch() {}
-export default connect(mapState, mapDispatch)(Users)
+export default connect(mapState, mapDispatch)(Users);
 ```
 
 ## Use Helpers
+
 - **Local Storage Helper** — Shortcuts for `localStorage.getItem()` or `localStorage.setItem()`
 - **Meta Helper** — JavaScript language shortcuts. e.g. `getByID(element) -> document.getElementById(element)`
 - **Data Helper** — Static JS data list Objects for anything like countries, languages, etc.
@@ -125,6 +146,7 @@ export default connect(mapState, mapDispatch)(Users)
 - **General Helper** — Regex functions, `scrollToErrors()`, `scrollToTop()`
 
 ## Use a Config File
+
 It can be useful to store all front-end configuration and static data for the project in a global, exportable const object.
 
 ```js
